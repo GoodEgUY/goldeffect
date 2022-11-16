@@ -1,4 +1,5 @@
 .main {
+   
     justify-content: center;
     position: relative;
     display: flex;
@@ -9,33 +10,54 @@
 }
 
 .smokeImgLeft {
+    width: 900px;
+    z-index: 1;
     position: absolute;
     bottom: -350px;
     left: -350px;
     animation: smokeLivitation 10s infinite ease-in-out;
     
-    width: 1000px;
-    height: 1000px;
+   
 }
 .smokeImgRight {
+    width: 900px;
     position: absolute;
     top: -350px;
     right: -350px;
     animation-delay: 0.6s;
-    animation: smokeLivitation 7s infinite ease-in-out;
-    
-    width: 1000px;
-    height: 1000px;
+    animation: smokeLivitation 5s infinite ease-in-out;
+   
 }
 .wrapper {
     font-size: 24px;
     font-family: Comf-B;
     z-index: 3;
     border-radius: 30px;
-    width:1170px;
-    background-color: aliceblue;
+    width: 100vw;
+    padding: 20px;
     justify-content: center;
    margin: 40px 0;
+}
+
+.button {
+    animation-delay: 0.6s;
+    animation: borders 5s infinite ease-in-out;
+    background-color: #c971ff5e;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border: black 4px solid;
+    margin-bottom: 20px;
+}
+.button:hover {
+    transform:scale(2px) ;
+}
+.button p {
+    align-items: center;
+    margin: 0;
 }
 
 @keyframes smokeLivitation {
@@ -53,5 +75,17 @@
     }
     100%{
         transform: translateY(0);
+    }
+}
+@keyframes borders {
+    0% {
+        border: 2px solid black;
+    }
+    50% {
+        border:2px black ;
+        border-style: dashed;
+    }
+    100% {
+        border: 2px solid black;
     }
 }
