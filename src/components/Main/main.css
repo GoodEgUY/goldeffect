@@ -40,20 +40,21 @@
 }
 
 .button {
-    animation-delay: 0.6s;
-    animation: borders 5s infinite ease-in-out;
+
+
     background-color: #c971ff5e;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 60px;
     border: black 4px solid;
     margin-bottom: 20px;
 }
 .button:hover {
-    transform:scale(2px) ;
+    border-style: dashed;
+    transform:scale(1.05) ;
 }
 .button p {
     align-items: center;
@@ -75,17 +76,5 @@
     }
     100%{
         transform: translateY(0);
-    }
-}
-@keyframes borders {
-    0% {
-        border: 2px solid black;
-    }
-    50% {
-        border:2px black ;
-        border-style: dashed;
-    }
-    100% {
-        border: 2px solid black;
     }
 }
