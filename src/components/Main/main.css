@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #333366;
+    background-color: #ff7f75;
 }
 
 .smokeImgLeft {
@@ -29,6 +29,8 @@
    
 }
 .wrapper {
+display: flex;
+flex-direction: column;
     font-size: 24px;
     font-family: Comf-B;
     z-index: 3;
@@ -62,7 +64,11 @@ background: linear-gradient(117deg, rgba(207,47,103,1) 0%, rgba(55,35,104,1) 100
     align-items: center;
     margin: 0;
 }
-
+.ava {
+width:200px
+height:200px
+border-radius:50%
+}
 @keyframes smokeLivitation {
     0% {
         transform: translateY(0);
