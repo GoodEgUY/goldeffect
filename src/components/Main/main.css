@@ -65,9 +65,9 @@ background: linear-gradient(117deg, rgba(207,47,103,1) 0%, rgba(55,35,104,1) 100
     margin: 0;
 }
 .ava {
-width:200px
-height:200px
-border-radius:50%
+width:200px;
+height:200px;
+border-radius:50%;
 }
 @keyframes smokeLivitation {
     0% {
