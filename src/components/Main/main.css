@@ -14,6 +14,7 @@ a {
     user-select: none;
     outline: none;
     width: 90%;
+    max-width: 400px;
     color: none;
     text-decoration: none;
 
@@ -82,22 +83,25 @@ a {
     align-items: center;
     margin: 0;
 }
-
+.dashbord>a {
+    opacity: 0;
+    transform: translateY(-100px);
+}
 .dashbord>a:nth-child(1) {
     
-    animation: fade 0.2s ease-in-out running;
+    animation: fade 0.2s ease-in-out forwards;
 }
 .dashbord>a:nth-child(2) {
    
-    animation: fade 0.2s running 0.1s;
+    animation: fade 0.2s forwards 0.1s;
 }
 .dashbord>a:nth-child(3) {
     
-    animation: fade 0.2s running 0.2s;
+    animation: fade 0.2s forwards 0.2s;
 }
 .dashbord>a:nth-child(4) {
    
-    animation: fade 0.2s running 0.3s;
+    animation: fade 0.2s forwards 0.3s;
 }
 .ico {
     right: 10%;
@@ -208,6 +212,9 @@ a {
 
 .aboutPortfolioNavLink:hover::after {
     transform: scale(1);
+}
+@media (max-device-width: 800px) {
+    
 }
 @keyframes smokeLivitation {
     0% {
