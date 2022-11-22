@@ -1,10 +1,10 @@
 @font-face {
   font-family: Comf-B;
-  src: url(../public/fonts/Comfortaa-Bold.ttf);
+  src: url(../public/fonts/NoahGrotesque-Bold.ttf);
 }
 @font-face {
   font-family: Comf-M;
-  src: url(../public/fonts/Comfortaa-Medium.ttf);
+  src: url(../public/fonts/NoahGrotesque-Bold.ttf);
 }
 
 body {

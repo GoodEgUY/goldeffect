@@ -17,6 +17,7 @@ function Main() {
     <>
       <div className="main">
         <div className="wrapper">
+          <img src="./images/tplinks.png" alt="" className="ava" />
           <div className="portNavigation">
             <p
               className={
@@ -41,52 +42,57 @@ function Main() {
           </div>
           {startOpened ? (
             <div className="dashbord">
-              <button
-                className="button"
-                onClick={(window.location.href = "https://github.com/GoodEgUY")}
-              >
-                <img src="./images/icon1.png" alt="" className="ico" />
-              </button>
-              <button
-                className="button"
-                onClick={(window.location.href = "https://github.com/GoodEgUY")}
-              >
-                <p>LinkedIN</p>
-                <img src="./images/icon1.png" alt="" className="ico" />
-              </button>
-              <button
-                className="button"
-                onClick={(window.location.href = "https://github.com/GoodEgUY")}
-              >
-                <p>Telegram</p>
-                <img src="./images/Icon5.png" alt="" className="ico" />
-              </button>
-              <button
-                className="button"
-                onClick={(window.location.href = "https://github.com/GoodEgUY")}
-              >
-                <p>Inst</p>
-                <img src="./images/icon1.png" alt="" className="ico" />
-              </button>
+              <a href="https://github.com/GoodEgUY">
+                <div className="button">
+                  <p>Github</p>
+                  <img src="./images/icon1.png" alt="" className="ico" />
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/ilya-pugachev-82b28a238/">
+                <div className="button">
+                  <p>LinkedIn</p>
+                  <img src="./images/icon1.png" alt="" className="ico" />
+                </div>
+              </a>
+              <a href="https://github.com/GoodEgUY">
+                <div className="button">
+                  <p>Telegram</p>
+                  <img src="./images/Icon5.png" alt="" className="ico" />
+                </div>
+              </a>
+              <a href="https://github.com/GoodEgUY">
+                <div className="button">
+                  <p>Instagram</p>
+                  <img src="./images/Icon5.png" alt="" className="ico" />
+                </div>
+              </a>
             </div>
           ) : (
             <div className="dashbord">
-              <div className="button">
-                <p>GITHUB23</p>
-                <img src="./images/icon1.png" alt="" className="ico" />
-              </div>
-              <div className="button">
-                <p>Linkedin</p>
-                <img src="./images/icon1.png" alt="" className="ico" />
-              </div>
-              <div className="button">
-                <p>TG</p>
-                <img src="./images/Icon5.png" alt="" className="ico" />
-              </div>
-              <div className="button">
-                <p>Inst</p>
-                <img src="./images/icon1.png" alt="" className="ico" />
-              </div>
+              <a href="https://github.com/GoodEgUY">
+                <div className="button">
+                  <p>Github</p>
+                  <img src="./images/icon1.png" alt="" className="ico" />
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/ilya-pugachev-82b28a238/">
+                <div className="button">
+                  <p>LinkedIn</p>
+                  <img src="./images/icon1.png" alt="" className="ico" />
+                </div>
+              </a>
+              <a href="https://github.com/GoodEgUY">
+                <div className="button">
+                  <p>Telegram</p>
+                  <img src="./images/Icon5.png" alt="" className="ico" />
+                </div>
+              </a>
+              <a href="https://github.com/GoodEgUY">
+                <div className="button">
+                  <p>Instagram</p>
+                  <img src="./images/Icon5.png" alt="" className="ico" />
+                </div>
+              </a>
             </div>
           )}
         </div>
