@@ -54,42 +54,46 @@ function Main() {
                   <img src="./images/icon1.png" alt="" className="ico" />
                 </div>
               </a>
-              <a href="https://github.com/GoodEgUY">
+              
+              <a href="https://www.upwork.com/freelancers/~013e4b2c90983b7ccc">
                 <div className="button">
-                  <p>Telegram</p>
-                  <img src="./images/Icon5.png" alt="" className="ico" />
+                  <p>Upwork</p>
+                  <img src="./images/icon1.png" alt="" className="ico" />
                 </div>
               </a>
-              <a href="https://github.com/GoodEgUY">
+              <a href="mailto:aezakmi2508@gmail.com">
                 <div className="button">
-                  <p>Instagram</p>
+                  <p>Contact Email</p>
                   <img src="./images/Icon5.png" alt="" className="ico" />
                 </div>
               </a>
             </div>
+            
           ) : (
+            
             <div className="dashbord">
-              <a href="https://github.com/GoodEgUY">
-                <div className="button">
-                  <p>Github</p>
-                  <img src="./images/icon1.png" alt="" className="ico" />
-                </div>
-              </a>
-              <a href="https://www.linkedin.com/in/ilya-pugachev-82b28a238/">
-                <div className="button">
-                  <p>LinkedIn</p>
-                  <img src="./images/icon1.png" alt="" className="ico" />
-                </div>
-              </a>
-              <a href="https://github.com/GoodEgUY">
+              <a href="https://t.me/thepugga_pr">
                 <div className="button">
                   <p>Telegram</p>
                   <img src="./images/Icon5.png" alt="" className="ico" />
                 </div>
               </a>
-              <a href="https://github.com/GoodEgUY">
+              
+              <a href="https://t.me/trapbomber">
                 <div className="button">
-                  <p>Instagram</p>
+                  <p>Music Channel TG</p>
+                  <img src="./images/icon1.png" alt="" className="ico" />
+                </div>
+              </a>
+              <a href="https://twitter.com/Thepugga1">
+                <div className="button">
+                  <p>Twitter</p>
+                  <img src="./images/Icon5.png" alt="" className="ico" />
+                </div>
+              </a>
+              <a href="https://soundcloud.com/thepugga">
+                <div className="button">
+                  <p>SoundCloud</p>
                   <img src="./images/Icon5.png" alt="" className="ico" />
                 </div>
               </a>
