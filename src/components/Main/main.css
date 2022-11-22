@@ -53,6 +53,7 @@ a {
 }
 
 .button {
+    position: relative;
     background: #282fd2;
     border-radius: 15px;
     display: flex;
@@ -81,7 +82,26 @@ a {
     align-items: center;
     margin: 0;
 }
+
+.dashbord>a:nth-child(1) {
+    
+    animation: fade 0.2s ease-in-out running;
+}
+.dashbord>a:nth-child(2) {
+   
+    animation: fade 0.2s running 0.1s;
+}
+.dashbord>a:nth-child(3) {
+    
+    animation: fade 0.2s running 0.2s;
+}
+.dashbord>a:nth-child(4) {
+   
+    animation: fade 0.2s running 0.3s;
+}
 .ico {
+    right: 10%;
+    position: absolute;
     width: 30px;
 }
 .dashbord {
@@ -94,6 +114,7 @@ a {
     width: 100%;
 }
 .ava {
+    animation: smokeLivitation 10s infinite;
     margin-top: -25px;
     margin-bottom: 25px;
     width:250px;
@@ -190,18 +211,35 @@ a {
 }
 @keyframes smokeLivitation {
     0% {
-        transform: translateY(0);
+        
+        transform: translateY(0) rotate(0) translateX(0);
     }
     25%{
-        transform: translateY(-9px);
+        
+        transform: translateY(-9px) rotate(2deg) translateX(-4px);
     }
     50%{
-        transform: translateY(0);
+        transform: translateY(2px)rotate(-2deg) translateX(2px);
     }
     75% {
-        transform: translateY(-9px);
+        
+        transform: translateY(-9px) translateX(-4px);
     }
     100%{
+        transform: translateY(0)translateX(0);
+    }
+}
+@keyframes fade {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateY(10px);
+    }
+    100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }

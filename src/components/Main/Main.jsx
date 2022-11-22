@@ -42,18 +42,22 @@ function Main() {
           </div>
           {startOpened ? (
             <div className="dashbord">
+              
               <a href="https://github.com/GoodEgUY">
                 <div className="button">
                   <p>Github</p>
                   <img src="./images/icon1.png" alt="" className="ico" />
                 </div>
               </a>
+              
+              
               <a href="https://www.linkedin.com/in/ilya-pugachev-82b28a238/">
                 <div className="button">
                   <p>LinkedIn</p>
                   <img src="./images/icon1.png" alt="" className="ico" />
                 </div>
               </a>
+             
               
               <a href="https://www.upwork.com/freelancers/~013e4b2c90983b7ccc">
                 <div className="button">
@@ -61,6 +65,7 @@ function Main() {
                   <img src="./images/icon1.png" alt="" className="ico" />
                 </div>
               </a>
+            
               <a href="mailto:aezakmi2508@gmail.com">
                 <div className="button">
                   <p>Contact Email</p>
@@ -69,7 +74,7 @@ function Main() {
               </a>
             </div>
             
-          ) : (
+          ) :  null} { UxProject ? (
             
             <div className="dashbord">
               <a href="https://t.me/thepugga_pr">
@@ -98,7 +103,7 @@ function Main() {
                 </div>
               </a>
             </div>
-          )}
+          ) : null }
         </div>
       </div>
     </>
