@@ -85,7 +85,7 @@ a {
 }
 .dashbord>a {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(-60px);
 }
 .dashbord>a:nth-child(1) {
     
@@ -129,7 +129,7 @@ a {
     justify-content: space-around;
     width: 200px;
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     
 }
 .activeAbNL {
@@ -238,7 +238,7 @@ a {
 }
 @keyframes fade {
     0%{
-        transform: translateY(-100px);
+        transform: translateY(-60px);
         opacity: 0;
     }
     50% {
