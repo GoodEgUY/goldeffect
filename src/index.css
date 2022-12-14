@@ -19,7 +19,7 @@
 ::-webkit-scrollbar-thumb { 
   background-color: #2C2C2C ;
   border: 3px solid #eef1fc ;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 
 body {

@@ -1,15 +1,18 @@
 .projects {
+    
+    width: 700px;
     padding-right: 7px;
-    height: 1500px;
+    height: 1500px!important;
     overflow-x: hidden;
    overflow-y: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 80px;
     
 }
 .projectItem {
-    margin-right: 3px;
+    margin-right: 20px;
     transition: all .2s ease-in;
     margin-bottom: 20px;
     border-radius: 14px;
@@ -40,6 +43,7 @@
     font-family: Comf-M;
 }
 a {
+    margin-right: 20px;
     width: 100%;
 }
 .projectImage {
@@ -55,11 +59,11 @@ a {
 }
 .projects>a:nth-child(1) {
     
-    animation: fade 0.2s ease-in-out forwards;
+    animation: fade 0.4s ease-in-out forwards;
 }
 .projects>a:nth-child(2) {
    
-    animation: fade 0.2s forwards 0.1s;
+    animation: fade 0.6s forwards 0.1s;
 }
 .projects>a:nth-child(3) {
     
@@ -68,4 +72,19 @@ a {
 .projects>a:nth-child(4) {
    
     animation: fade 0.2s forwards 0.3s;
+}
+
+@media (max-device-width: 800px) {
+    .projects {
+        padding-top: 0;
+        width: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+    .projectItem {
+        margin-right: 0;
+    }
+    a {
+        margin-right: 0;
+    }
 }
