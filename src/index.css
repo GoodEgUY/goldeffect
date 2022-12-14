@@ -6,6 +6,21 @@
   font-family: Comf-M;
   src: url(../public/fonts/NoahGrotesque-Light.ttf);
 }
+::-webkit-scrollbar {
+  width: 9px;
+  
+}
+
+::-webkit-scrollbar-track {
+  
+  background-color: #eef1fc;
+}
+
+::-webkit-scrollbar-thumb { 
+  background-color: #2C2C2C ;
+  border: 3px solid #eef1fc ;
+  border-radius: 3px;
+}
 
 body {
   margin: 0;

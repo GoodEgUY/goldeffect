@@ -5,7 +5,7 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    
     background-color: #eef1fc;
 }
 
@@ -40,6 +40,7 @@ a {
    
 }
 .wrapper {
+    
     display: flex;
     flex-direction: column;
     font-size: 24px;
@@ -47,8 +48,8 @@ a {
     z-index: 3;
     border-radius: 30px;
     width: 100vw;
-    padding: 0 20px 20px 20px;
-    justify-content: center;
+    padding: 40px 20px 20px 20px;
+    
     align-items: center ;
    margin: 40px 0;
 }

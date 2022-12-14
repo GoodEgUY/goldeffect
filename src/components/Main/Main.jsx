@@ -1,17 +1,26 @@
 import "./main.css";
 import { useState } from "react";
+import Projects from "./Projects/Projects";
 
 function Main() {
   const [startOpened, setStartOpened] = useState(true);
 
   const [UxProject, setUxProject] = useState(false);
+  const [UiProject, setUiProject] = useState(false);
   const openStart = () => {
     setStartOpened(true);
     setUxProject(false);
+    setUiProject(false);
   };
   const openUxProject = () => {
     setStartOpened(false);
     setUxProject(true);
+    setUiProject(false);
+  };
+  const openUiProject = () => {
+    setStartOpened(false);
+    setUxProject(false);
+    setUiProject(true)
   };
   return (
     <>
@@ -28,6 +37,16 @@ function Main() {
               onClick={openStart}
             >
               Develop
+            </p>
+            <p
+              className={
+                UiProject
+                  ? "aboutPortfolioNavLink activeAbNL"
+                  : "aboutPortfolioNavLink"
+              }
+              onClick={openUiProject}
+            >
+              Projects
             </p>
             <p
               className={
@@ -58,7 +77,12 @@ function Main() {
                 </div>
               </a>
              
-              
+              <a href="https://drive.google.com/file/d/1SDvsSjgvtGuDJUQD8G7UOzTWoxkIOXiH/view?usp=share_link">
+                <div className="button">
+                  <p>CV</p>
+                  <img src="./images/Icon5.png" alt="" className="ico" />
+                </div>
+              </a>
               <a href="https://www.upwork.com/freelancers/~013e4b2c90983b7ccc">
                 <div className="button">
                   <p>Upwork</p>
@@ -66,12 +90,7 @@ function Main() {
                 </div>
               </a>
             
-              <a href="mailto:aezakmi2508@gmail.com">
-                <div className="button">
-                  <p>Contact Email</p>
-                  <img src="./images/Icon5.png" alt="" className="ico" />
-                </div>
-              </a>
+              
             </div>
             
           ) :  null} { UxProject ? (
@@ -103,7 +122,7 @@ function Main() {
                 </div>
               </a>
             </div>
-          ) : null }
+          ) : null } {UiProject ? <Projects/>: null}
         </div>
       </div>
     </>
