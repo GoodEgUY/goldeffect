@@ -1,0 +1,16 @@
+{
+  "name": "Pugga Links",
+  "short_name": "Pugga",
+  "start_url": "pugga/",
+  "display": "fullscreen",
+  "background_color": "#fff",
+  "description": ")))",
+  "icons": [{
+    "src": "images/touch/homescreen72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }],
+  "related_applications": [{
+    "platform": "web"
+  }]
+}
