@@ -9,7 +9,7 @@ const Projects = () => {
         <div className="projectItem">
           <img src="./images/mel.png" alt="" className="projectImage" />
           <div className="projectText">
-            <p className="projectName">Якась назва)</p>
+            <p className="projectName">(in developing/only PC version)</p>
             <p className="projectTitle">Videoproduction</p>
           </div>
         </div>
