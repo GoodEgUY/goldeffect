@@ -77,7 +77,7 @@ function Main() {
                 </div>
               </a>
              
-              <a href="https://drive.google.com/file/d/1SDvsSjgvtGuDJUQD8G7UOzTWoxkIOXiH/view?usp=share_link">
+              <a href="https://drive.google.com/file/d/1WmMyv6tPPNWeufI_P-uoICpJmE6YVA5Y/view?usp=drivesdk">
                 <div className="button">
                   <p>CV</p>
                   <img src="./images/Icon5.png" alt="" className="ico" />
