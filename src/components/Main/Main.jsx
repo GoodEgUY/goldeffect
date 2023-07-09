@@ -61,7 +61,12 @@ function Main() {
           </div>
           {startOpened ? (
             <div className="dashbord">
-              
+              <a href="https://forms.gle/niy4LEhAn54ieree6">
+                <div className="button">
+                  <p>Замовити розробку</p>
+                  <img src="./images/icon1.png" alt="" className="ico" />
+                </div>
+              </a>
               <a href="https://github.com/GoodEgUY">
                 <div className="button">
                   <p>Github</p>
