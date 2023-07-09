@@ -88,12 +88,7 @@ function Main() {
                   <img src="./images/Icon5.png" alt="" className="ico" />
                 </div>
               </a>
-              <a href="https://www.upwork.com/freelancers/~013e4b2c90983b7ccc">
-                <div className="button">
-                  <p>Upwork</p>
-                  <img src="./images/icon1.png" alt="" className="ico" />
-                </div>
-              </a>
+             
             
               
             </div>
