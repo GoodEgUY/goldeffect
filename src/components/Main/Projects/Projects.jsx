@@ -5,6 +5,7 @@ const Projects = () => {
   return (
     
     <div className="projects">
+      
         <div className="projectItem">
           <img src="./images/champ.png" alt="" className="projectImage" />
           <div className="projectText">
@@ -12,7 +13,6 @@ const Projects = () => {
             <p className="projectTitle">Marketing Agency</p>
           </div>
         </div>
-      </a>
       
     </div>
     
