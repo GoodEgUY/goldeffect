@@ -30,6 +30,12 @@ self.addEventListener('fetch', event => {
     )
   );
 });
+self.addEventListener('push', event => {
+    const data = event.data ? event.data.text() : 'No data';
+    self.registration.showNotification('Test Notification', {
+        body: data,
+    });
+});
 
 // Активация Service Worker и очистка старого кэша
 self.addEventListener('activate', event => {
