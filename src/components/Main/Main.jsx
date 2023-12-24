@@ -23,6 +23,16 @@ function Main() {
     setUxProject(false);
     setUiProject(true)
   };
+
+  if (Notification.permission === 'default') {
+    Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+            console.log('Разрешение на отправку уведомлений получено');
+        } else {
+            console.log('Разрешение на отправку уведомлений отклонено');
+        }
+    });
+  }
   return (
     <>
       <div className="main">
