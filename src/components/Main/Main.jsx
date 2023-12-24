@@ -24,15 +24,29 @@ function Main() {
     setUiProject(true)
   };
 
-  if (Notification.permission === 'default') {
-    Notification.requestPermission().then(permission => {
-        if (permission === 'granted') {
-            console.log('Разрешение на отправку уведомлений получено');
-        } else {
-            console.log('Разрешение на отправку уведомлений отклонено');
-        }
-    });
-  }
+  Notification.requestPermission().then(permission => {
+    if (permission === 'granted') {
+        console.log('Permission for receiving notifications was granted');
+        // Получаем токен
+        getToken(messaging, { vapidKey: 'BNITij7os0zJH7E14wKNsVp_VroN6NI0qCZHpqCAODD04PTdyzyQwIP5O19ob1t0KVvYpGt2w4E-IF7yINt1Wu8' }).then(currentToken => {
+            if (currentToken) {
+                console.log('Notification Token:', currentToken);
+                // Отправьте этот токен на ваш сервер, если нужно
+            } else {
+                console.log('No registration token available. Request permission to generate one.');
+            }
+        }).catch((err) => {
+            console.log('An error occurred while retrieving token. ', err);
+        });
+    } else {
+        console.log('Permission for receiving notifications was denied');
+    }
+});
+onMessage(messaging, (payload) => {
+  console.log('Message received. ', payload);
+  // Здесь можно кастомизировать уведомления, например, показать их в интерфейсе
+});
+
   // ff
   return (
     <>
