@@ -2,8 +2,8 @@
 const CACHE_NAME = 'v1';
 const urlsToCache = [
   '/',
-  '/styles/main.css',
-  '/script/main.js'
+  '../src/components/Main/main.css',
+  '../src/components/Main/Main.js'
 ];
 
 // Установка Service Worker и кэширование ресурсов
