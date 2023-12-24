@@ -30,11 +30,23 @@ self.addEventListener('fetch', event => {
     )
   );
 });
+Notification.requestPermission().then(permission => {
+    if (permission === 'granted') {
+        console.log('Permission for Notifications was granted');
+    } else {
+        console.log('Permission for Notifications was denied');
+    }
+});
 self.addEventListener('push', event => {
-    const data = event.data ? event.data.text() : 'No data';
-    self.registration.showNotification('Test Notification', {
-        body: data,
-    });
+    // Проверка разрешения перед показом уведомления
+    if (Notification.permission === 'granted') {
+        event.waitUntil(
+            self.registration.showNotification('Title', {
+                body: 'Notification body',
+                // другие параметры уведомления
+            })
+        );
+    }
 });
 
 // Активация Service Worker и очистка старого кэша
