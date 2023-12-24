@@ -1,9 +1,7 @@
 // Указываем имя кэша и список ресурсов для кэширования
 const CACHE_NAME = 'v1';
 const urlsToCache = [
-  '/',
-  '../src/components/Main/main.css',
-  '../src/components/Main/Main.js'
+  '/'
 ];
 
 // Установка Service Worker и кэширование ресурсов
