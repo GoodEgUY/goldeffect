@@ -30,13 +30,7 @@ self.addEventListener('fetch', event => {
     )
   );
 });
-Notification.requestPermission().then(permission => {
-    if (permission === 'granted') {
-        console.log('Permission for Notifications was granted');
-    } else {
-        console.log('Permission for Notifications was denied');
-    }
-});
+
 self.addEventListener('push', event => {
     // Проверка разрешения перед показом уведомления
     if (Notification.permission === 'granted') {
