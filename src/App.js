@@ -25,18 +25,8 @@ function App() {
         });
     }
   }, []);
-  useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/firebase-messaging-sw.js")
-        .then(function (registration) {
-          console.log("Service Worker Registered", registration);
-        })
-        .catch(function (err) {
-          console.log("Service Worker Registration Failed", err);
-        });
-    }
-  }, []);
+
+    
   console.log("apply");
   const firebaseConfig = {
     apiKey: "AIzaSyD6S2EXkCINnLaWdTSyuk4IKRNckSHutRo",
