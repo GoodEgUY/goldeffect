@@ -11,6 +11,15 @@ function App() {
         console.log('Service Worker Registration failed', error);
     });
 }
+if (Notification.permission === 'default') {
+  Notification.requestPermission().then(permission => {
+      if (permission === 'granted') {
+          console.log('Разрешение на отправку уведомлений получено');
+      } else {
+          console.log('Разрешение на отправку уведомлений отклонено');
+      }
+  });
+}
 
   return (
     <div className="App">
