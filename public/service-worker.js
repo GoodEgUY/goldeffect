@@ -31,18 +31,6 @@ self.addEventListener('fetch', event => {
   );
 });
 
-self.addEventListener('push', event => {
-    // Проверка разрешения перед показом уведомления
-    if (Notification.permission === 'granted') {
-        event.waitUntil(
-            self.registration.showNotification('Title', {
-                body: 'Notification body',
-                // другие параметры уведомления
-            })
-        );
-    }
-});
-
 // Активация Service Worker и очистка старого кэша
 self.addEventListener('activate', event => {
   var cacheWhitelist = ['v1'];
@@ -58,4 +46,15 @@ self.addEventListener('activate', event => {
       );
     })
   );
+});
+self.addEventListener('push', event => {
+    // Проверка разрешения перед показом уведомления
+    if (Notification.permission === 'granted') {
+        event.waitUntil(
+            self.registration.showNotification('Title', {
+                body: 'Notification body',
+                // другие параметры уведомления
+            })
+        );
+    }
 });
