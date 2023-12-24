@@ -25,6 +25,18 @@ function App() {
         });
     }
   }, []);
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/firebase-messaging-sw.js")
+        .then(function (registration) {
+          console.log("Service Worker Registered", registration);
+        })
+        .catch(function (err) {
+          console.log("Service Worker Registration Failed", err);
+        });
+    }
+  }, []);
   console.log("apply");
   const firebaseConfig = {
     apiKey: "AIzaSyD6S2EXkCINnLaWdTSyuk4IKRNckSHutRo",
@@ -36,28 +48,35 @@ function App() {
   };
   const app = initializeApp(firebaseConfig);
   const messaging = getMessaging(app);
-  Notification.requestPermission().then(permission => {
-    if (permission === 'granted') {
-        console.log('Permission for receiving notifications was granted');
-        // Получаем токен
-        getToken(messaging, { vapidKey: 'BNITij7os0zJH7E14wKNsVp_VroN6NI0qCZHpqCAODD04PTdyzyQwIP5O19ob1t0KVvYpGt2w4E-IF7yINt1Wu8' }).then(currentToken => {
-            if (currentToken) {
-                console.log('Notification Token:', currentToken);
-                // Отправьте этот токен на ваш сервер, если нужно
-            } else {
-                console.log('No registration token available. Request permission to generate one.');
-            }
-        }).catch((err) => {
-            console.log('An error occurred while retrieving token. ', err);
+  Notification.requestPermission().then((permission) => {
+    if (permission === "granted") {
+      console.log("Permission for receiving notifications was granted");
+      // Получаем токен
+      getToken(messaging, {
+        vapidKey:
+          "BNITij7os0zJH7E14wKNsVp_VroN6NI0qCZHpqCAODD04PTdyzyQwIP5O19ob1t0KVvYpGt2w4E-IF7yINt1Wu8",
+      })
+        .then((currentToken) => {
+          if (currentToken) {
+            console.log("Notification Token:", currentToken);
+            // Отправьте этот токен на ваш сервер, если нужно
+          } else {
+            console.log(
+              "No registration token available. Request permission to generate one."
+            );
+          }
+        })
+        .catch((err) => {
+          console.log("An error occurred while retrieving token. ", err);
         });
     } else {
-        console.log('Permission for receiving notifications was denied');
+      console.log("Permission for receiving notifications was denied");
     }
-});
-onMessage(messaging, (payload) => {
-  console.log('Message received. ', payload);
-  // Здесь можно кастомизировать уведомления, например, показать их в интерфейсе
-});
+  });
+  onMessage(messaging, (payload) => {
+    console.log("Message received. ", payload);
+    // Здесь можно кастомизировать уведомления, например, показать их в интерфейсе
+  });
   return (
     <div className="App">
       <Main />
