@@ -3,16 +3,7 @@ import { useState } from "react";
 import Projects from "./Projects/Projects";
 
 function Main() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-    .then(function(registration) {
-        console.log('Service Worker Registered', registration);
-    })
-    .catch(function(error) {
-        console.log('Service Worker Registration failed', error);
-    });
-}
-
+ 
   const [startOpened, setStartOpened] = useState(true);
 
   const [UxProject, setUxProject] = useState(false);
