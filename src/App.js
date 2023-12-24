@@ -11,7 +11,7 @@ function App() {
         console.log('Service Worker Registration failed', error);
     });
 }
-
+console.log("apply")
 
   return (
     <div className="App">
