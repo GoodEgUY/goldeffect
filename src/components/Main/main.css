@@ -67,7 +67,7 @@ a {
     padding: 40px 20px 0 20px;
     
     align-items: center ;
-   margin: 40px 0 0 0;
+   margin: 5px 0 0 0;
 }
 
 .button {
@@ -133,12 +133,13 @@ a {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 400px;
 }
 .ava {
     animation: smokeLivitation 10s infinite;
     margin-top: -25px;
     margin-bottom: 25px;
-    width:250px;
+    width:150px;
     
    
 }
