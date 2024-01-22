@@ -1,20 +1,36 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+#root {
+height: 100%;
+}
+.App {
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+}
 .main {
    
     justify-content: center;
     position: relative;
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    overflow: hidden;
     background-color: #eef1fc;
 }
 
 a {
     
     user-select: none;
-    outline: none;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    
+    
     color: none;
     text-decoration: none;
 
