@@ -75,7 +75,10 @@
    
     animation: fade 0.2s forwards 0.3s;
 }
-
+.projects a {
+    max-width: 440px;
+    width: 100%;
+}
 @media (max-device-width: 800px) {
     .projects {
         padding-top: 0;
