@@ -9,7 +9,7 @@ const Projects = () => {
           <img src="./images/pods.png" alt="" className="projectImage" />
 
           <div className="projectText">
-            <p className="projectName">PODS</p>
+            <p className="projectName">PODS.COM.UA</p>
             <p className="projectTitle">Vape Shop</p>
           </div>
         </div>
@@ -18,7 +18,7 @@ const Projects = () => {
         <div className="projectItem">
           <img src="./images/vip.png" alt="" className="projectImage" />
           <div className="projectText">
-            <p className="projectName">VIPKALYAN</p>
+            <p className="projectName">VIPKALYAN.COM</p>
             <p className="projectTitle">Hookah Shop</p>
           </div>
         </div>
