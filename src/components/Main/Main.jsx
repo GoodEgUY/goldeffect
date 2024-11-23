@@ -8,11 +8,15 @@ import AOS from "aos";
 function Main() {
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    AOS.init();
-  }, [])
+    AOS.init({
+      duration: 1000, // Длительность анимации
+      offset: 100, // Отступ перед активацией
+      once: true, // Анимация только один раз
+      mirror: false, // Не повторять при обратной прокрутке
+    });
+  }, []);
   return (
     <>
-      
       <div className="main">
         <div className="wrapper">
           <img src="./images/sphere2.svg" alt="" className="sphere" />
@@ -67,29 +71,49 @@ function Main() {
           <div className="contentWrapper">
             <div className="servicesWrapper">
               <div className="serviceItem">
-                <img src="./images/service1.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
-                onLoad={() => setLoaded(true)}/>
+                <img
+                  src="./images/service1.svg"
+                  alt=""
+                  className={`image ${loaded ? "loaded" : ""}`}
+                  onLoad={() => setLoaded(true)}
+                />
                 <p>Layout</p> <button className="mainButton">Make Order</button>
               </div>
               <div className="serviceItem">
-                <img src="./images/service2.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
-                onLoad={() => setLoaded(true)} />
+                <img
+                  src="./images/service2.svg"
+                  alt=""
+                  className={`image ${loaded ? "loaded" : ""}`}
+                  onLoad={() => setLoaded(true)}
+                />
                 <p>Server</p> <button className="mainButton">Make Order</button>
               </div>
               <div className="serviceItem">
-                <img src="./images/service3.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
-                onLoad={() => setLoaded(true)}/>
+                <img
+                  src="./images/service3.svg"
+                  alt=""
+                  className={`image ${loaded ? "loaded" : ""}`}
+                  onLoad={() => setLoaded(true)}
+                />
                 <p>Full Project</p>{" "}
                 <button className="mainButton">Make Order</button>
               </div>
               <div className="serviceItem">
-                <img src="./images/service4.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
-                onLoad={() => setLoaded(true)}/>
+                <img
+                  src="./images/service4.svg"
+                  alt=""
+                  className={`image ${loaded ? "loaded" : ""}`}
+                  onLoad={() => setLoaded(true)}
+                />
                 <p>TG Bot</p> <button className="mainButton">Make Order</button>
               </div>
               <div className="serviceItem">
-                <img src="./images/service5.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
-                onLoad={() => setLoaded(true)}/>
+                <img
+                  src="./images/service5.svg"
+                  alt=""
+                  className={`image ${loaded ? "loaded" : ""}`}
+                  onLoad={() => setLoaded(true)}
+                />
                 <p>Parcing Service</p>{" "}
                 <button className="mainButton">Make Order</button>
               </div>
