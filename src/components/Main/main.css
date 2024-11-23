@@ -1,271 +1,297 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 body {
-    height: 100%;
+  height: 100%;
 }
 #root {
-height: 100%;
+  height: 100%;
 }
 .App {
-    height: 100%;
+  height: 100%;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .main {
-   
-    justify-content: center;
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 0 16px;
-    overflow: hidden;
-    background-color: #eef1fc;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  overflow-x: hidden;
+  background-color: #1a1a1a;
 }
-
+.sphere {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  width: 80%;
+  filter: blur(10px);
+  z-index: -1;
+}
 a {
-    
-    user-select: none;
-    width: 100%;
-    
-    
-    color: none;
-    text-decoration: none;
+  user-select: none;
+  width: 100%;
 
+  color: none;
+  text-decoration: none;
 }
-.smokeImgLeft {
-    width: 800px;
-    z-index: 0;
-    position: absolute;
-    bottom: -350px;
-    left: -350px;
-    animation: smokeLivitation 10s infinite ease-in-out;
-    
-   
+.marquee {
+  padding: 20px 0;
+  background: linear-gradient(90deg, #a7f306 0%, #f3cd06 100%);
 }
-.smokeImgRight {
-    
-    width: 800px;
-    position: absolute;
-    top: -350px;
-    right: -350px;
-    animation-delay: 0.6s;
-    animation: smokeLivitation 5s infinite ease-in-out;
-   
+.contentWrapper {
+  color: #f6f6f6;
 }
 .wrapper {
-    
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+
+  z-index: 3;
+  border-radius: 30px;
+  width: 100vw;
+  padding: 40px 20px 0 20px;
+
+  align-items: center;
+  margin: 5px 0 0 0;
+}
+.contentWrapper {
     display: flex;
     flex-direction: column;
-    font-size: 24px;
-    font-family: Comf-B;
-    z-index: 3;
-    border-radius: 30px;
-    width: 100vw;
-    padding: 40px 20px 0 20px;
-    
-    align-items: center ;
-   margin: 5px 0 0 0;
-}
+    align-items: flex-start;
+width: 100%;
+gap: 20px;
+padding: 30px 0;
 
-.button {
-    position: relative;
-    background: #282fd2;
-    border-radius: 15px;
-    display: flex;
-    margin-right: 0;
-    justify-content: space-evenly;
-    align-items: center;
+}
+.introWrapper h1 {
+    text-align: left;
+    color: #f6f6f6;
+    margin-bottom: 20px;
+}
+.introWrapper p {
+    color: #f6f6f6;
+    margin-bottom: 30px;
+}
+.introWrapper span {
+    color: #a7f306;
+}
+.technologiesWrapper {
     width: 100%;
-    height: 60px;
-    border: #eef1fc 2px solid;
-    
-    transition: all 0.2s linear;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.blockName {
+    text-align: left;
+}
+.techItem {
+    padding: 10px 5px;
+    border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  
+  
+  
+}
+.button {
+  position: relative;
+  background: #a7f306;
+  border-radius: 15px;
+  display: flex;
+  margin-right: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border: #eef1fc 2px solid;
+
+  transition: all 0.2s linear;
 }
 .button:hover {
-    background: #eef1fc;
-    border: #282fd2 2px solid;
-    border-style: dashed;
-    transform:scale(1.05) ;
+  background: #eef1fc;
+  border: #a7f306 2px solid;
+  border-style: dashed;
+  transform: scale(1.05);
 }
 .button:hover p {
-    color: #282fd2;
+  color: #a7f306;
 }
 .button p {
-    font-size: 20px;
-    font-family: Comf-M;
-    color: white;
-    align-items: center;
-    margin: 0;
+  font-size: 20px;
+
+  color: white;
+  align-items: center;
+  margin: 0;
 }
-.dashbord>a {
-    opacity: 0;
-    transform: translateY(-60px);
+.dashbord > a {
+  opacity: 0;
+  transform: translateY(-60px);
 }
-.dashbord>a:nth-child(1) {
-    
-    animation: fade 0.2s ease-in-out forwards;
+.dashbord > a:nth-child(1) {
+  animation: fade 0.2s ease-in-out forwards;
 }
-.dashbord>a:nth-child(2) {
-   
-    animation: fade 0.2s forwards 0.1s;
+.dashbord > a:nth-child(2) {
+  animation: fade 0.2s forwards 0.1s;
 }
-.dashbord>a:nth-child(3) {
-    
-    animation: fade 0.2s forwards 0.2s;
+.dashbord > a:nth-child(3) {
+  animation: fade 0.2s forwards 0.2s;
 }
-.dashbord>a:nth-child(4) {
-   
-    animation: fade 0.2s forwards 0.3s;
+.dashbord > a:nth-child(4) {
+  animation: fade 0.2s forwards 0.3s;
 }
 .ico {
-    right: 10%;
-    position: absolute;
-    width: 30px;
+  right: 10%;
+  position: absolute;
+  width: 30px;
 }
 .dashbord {
-    
-    height: 350px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
 }
 .ava {
-    animation: smokeLivitation 10s infinite;
-    margin-top: -25px;
-    margin-bottom: 25px;
-    width:150px;
-    
-   
+  animation: smokeLivitation 10s infinite;
+  margin-top: -25px;
+  margin-bottom: 25px;
+  width: 150px;
 }
 .portNavigation {
-    justify-content: space-around;
-    width: 200px;
-    display: flex;
-    margin-bottom: 40px;
-    
+  justify-content: space-around;
+  width: 200px;
+  display: flex;
+  margin-bottom: 40px;
 }
 .activeAbNL {
-    color: #282FD2!important;
+  color: #a7f306 !important;
 }
 .activeAbNL::before {
-    align-items: center;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    margin-left: 10px;
-    bottom: -15px;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background-color: #282FD2;
-    transform: scale(1) !important;
-    
+  align-items: center;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  margin-left: 10px;
+  bottom: -15px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: #a7f306;
+  transform: scale(1) !important;
 }
 
 .activeAbNL::after {
-    border-radius: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -17px;
-    left: 40%;
-    width: 10px;
-    height: 10px;
-    background-color: #282FD2;
-    transform: scale(1) !important;
-    
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -17px;
+  left: 40%;
+  width: 10px;
+  height: 10px;
+  background-color: #a7f306;
+  transform: scale(1) !important;
 }
 .aboutPortfolioNavLink {
-    cursor: pointer;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 25px;
-    position: relative;
-    text-decoration: none;
-    color: #2C2C2C;
-    font-size:18px ;
-    
-    margin-bottom: 0;
+  cursor: pointer;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 25px;
+  position: relative;
+  text-decoration: none;
+  color: #2c2c2c;
+  font-size: 18px;
+
+  margin-bottom: 0;
 }
 .aboutPortfolioNavLink:hover {
-    color: #282FD2;
+  color: #a7f306;
 }
 .aboutPortfolioNavLink::before {
-    align-items: center;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    margin-left: 10px;
-    bottom: -15px;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background-color: #282FD2;
-    transform: scale(0);
-    transition: transform .4s ease-in;
+  align-items: center;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  margin-left: 10px;
+  bottom: -15px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: #a7f306;
+  transform: scale(0);
+  transition: transform 0.4s ease-in;
 }
 .aboutPortfolioNavLink:hover::before {
-    transform: scale(1);
+  transform: scale(1);
 }
 .aboutPortfolioNavLink::after {
-    border-radius: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -17px;
-    left: 40%;
-    width: 10px;
-    height: 10px;
-    background-color: #282FD2;
-    transform: scale(0);
-    transition: transform .2s ease-in;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -17px;
+  left: 40%;
+  width: 10px;
+  height: 10px;
+  background-color: #a7f306;
+  transform: scale(0);
+  transition: transform 0.2s ease-in;
 }
 
 .aboutPortfolioNavLink:hover::after {
-    transform: scale(1);
+  transform: scale(1);
+}
+.statisticItem {
+  border: 1.08px solid;
+
+  border-image-source: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 @media (max-device-width: 800px) {
-    
 }
 @keyframes smokeLivitation {
-    0% {
-        
-        transform: translateY(0) rotate(0) translateX(0);
-    }
-    25%{
-        
-        transform: translateY(-9px) rotate(2deg) translateX(-4px);
-    }
-    50%{
-        transform: translateY(2px)rotate(-2deg) translateX(2px);
-    }
-    75% {
-        
-        transform: translateY(-9px) translateX(-4px);
-    }
-    100%{
-        transform: translateY(0)translateX(0);
-    }
+  0% {
+    transform: translateY(0) rotate(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-9px) rotate(2deg) translateX(-4px);
+  }
+  50% {
+    transform: translateY(2px) rotate(-2deg) translateX(2px);
+  }
+  75% {
+    transform: translateY(-9px) translateX(-4px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
 }
 @keyframes fade {
-    0%{
-        transform: translateY(-60px);
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.3;
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

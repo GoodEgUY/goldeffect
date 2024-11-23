@@ -1,9 +1,20 @@
 import "./main.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Projects from "./Projects/Projects";
-
+import Marquee from "react-fast-marquee";
+import "aos/dist/aos.css";
+import AOS from "aos";
 function Main() {
- 
+  useEffect(() => {
+    AOS.init({
+        duration: 1000, // Длительность анимации
+        offset: 30, // Отступ до срабатывания анимации
+        easing: 'ease-in-out', // Тип анимации
+        once: false, // Анимация срабатывает при каждом прокручивании
+        mirror: true, // Включить анимацию при обратной прокрутке
+    });
+}, []);
+
   const [startOpened, setStartOpened] = useState(true);
 
   const [UxProject, setUxProject] = useState(false);
@@ -21,18 +32,16 @@ function Main() {
   const openUiProject = () => {
     setStartOpened(false);
     setUxProject(false);
-    setUiProject(true)
+    setUiProject(true);
   };
-
- 
 
   // ff
   return (
     <>
       <div className="main">
         <div className="wrapper">
-          <img src="./images/tplinks.png" alt="" className="ava" />
-          <div className="portNavigation">
+          <img src="./images/sphere2.svg" alt="" className="sphere" />
+          {/*<div className="portNavigation">
             <p
               className={
                 startOpened
@@ -64,8 +73,60 @@ function Main() {
               Other
             </p>
           </div>
-          {startOpened ? (
+          */}
+          <div className="introWrapper">
+            <h1>
+              TURN AN <span>IDEA</span> INTO A <span>PROJECT</span>
+            </h1>
+            <p>
+              I know how to solve it <span>turnkey</span>
+            </p>
+          </div>
+          <div className="marquee">
+            <Marquee speed={50} gradient={false}>
+              <span style={{ marginRight: 100 }}>UP TO 20 PROJECTS</span>
+              <span style={{ marginRight: 100 }}>LATEST TECHNOLOGIES</span>
+              <span style={{ marginRight: 100 }}>FX/CRYPTO EXPIRIENCE</span>
+            </Marquee>
+          </div>
+          <div className="contentWrapper">
+            <div className="technologiesWrapper">
+              <h2 className="blockName" data-aos="fade-up">
+                ALL TECHNOLOGIES
+              </h2>
+              <div className="techItem" data-aos="fade-up">
+                HTML5/CSS3/JS(ES.6)
+              </div>
+              <div className="techItem" data-aos="fade-up">
+                React.JS
+              </div>
+              <div className="techItem" data-aos="fade-up">
+                Gatsby.JS
+              </div>
+              <div className="techItem" data-aos="fade-up">
+                Next.JS
+              </div>
+              <div className="techItem" data-aos="fade-up">
+                Node.JS
+              </div>
+              <div className="techItem" data-aos="fade-up">
+                Django
+              </div>
+              <div className="techItem" data-aos="fade-up">
+                Python
+              </div>
+              <div className="techItem" data-aos="fade-up">
+                PHP
+              </div>
+            </div>
+          </div>
+          {/*{startOpened ? (
             <div className="dashbord">
+              <div className="dashboardStatistic">
+                <div className="statisticItem">UP TO 20 PROJECTS COMPLETE</div>
+                <div className="statisticItem">UP TO 20 PROJECTS COMPLETE</div>
+                <div className="statisticItem"></div>
+              </div>
               <a href="https://forms.gle/niy4LEhAn54ieree6">
                 <div className="button">
                   <p>Замовити розробку</p>
@@ -78,28 +139,23 @@ function Main() {
                   <img src="./images/icon1.png" alt="" className="ico" />
                 </div>
               </a>
-              
-              
+
               <a href="https://www.linkedin.com/in/ilya-pugachev-82b28a238/">
                 <div className="button">
                   <p>LinkedIn</p>
                   <img src="./images/icon1.png" alt="" className="ico" />
                 </div>
               </a>
-             
+
               <a href="https://drive.google.com/file/d/1WmMyv6tPPNWeufI_P-uoICpJmE6YVA5Y/view?usp=drivesdk">
                 <div className="button">
                   <p>CV</p>
                   <img src="./images/Icon5.png" alt="" className="ico" />
                 </div>
               </a>
-             
-            
-              
             </div>
-            
-          ) :  null} { UxProject ? (
-            
+          ) : null}{" "}
+          {UxProject ? (
             <div className="dashbord">
               <a href="https://t.me/thepugga_pr">
                 <div className="button">
@@ -107,7 +163,7 @@ function Main() {
                   <img src="./images/Icon5.png" alt="" className="ico" />
                 </div>
               </a>
-              
+
               <a href="https://t.me/trapbomber">
                 <div className="button">
                   <p>Music Channel TG</p>
@@ -127,7 +183,8 @@ function Main() {
                 </div>
               </a>
             </div>
-          ) : null } {UiProject ? <Projects/>: null}
+          ) : null}{" "}
+          {UiProject ? <Projects /> : null}*/}
         </div>
       </div>
     </>
