@@ -63,7 +63,7 @@ function Main() {
           </div>
           <div className="contentWrapper ">
             <div className="servicesWrapper wrappers">
-              <h2 className="blockName">///SERVICES</h2>
+              <h2 className="blockName">/\SERVICES</h2>
               <motion.div
                 className="serviceItem"
                 initial={{ opacity: 0, y: 60 }}
@@ -153,7 +153,7 @@ function Main() {
               </motion.div>
             </div>
             <div className="technologiesWrapper wrappers">
-              <h2 className="blockName">///TECHNOLOGIES</h2>
+              <h2 className="blockName">/\TECHNOLOGIES</h2>
               <motion.div
                 className="techItem"
                 initial={{ opacity: 0, y: 60 }}
