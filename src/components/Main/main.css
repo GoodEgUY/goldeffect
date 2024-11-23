@@ -79,6 +79,40 @@ padding: 30px 0;
 .introWrapper span {
     color: #a7f306;
 }
+.servicesWrapper {
+    display: flex;
+    flex-direction: column;
+gap: 20px;
+width: 100%;
+
+}
+.serviceItem {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    background-color: #ffffff12;
+    border: 1px solid #ffffff2a;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.serviceItem p {
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.mainButton {
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid #a7f306;
+    color: #a7f306;
+    background-color: transparent;
+    transition: all .2s ease;
+}
+.mainButton:hover {
+background-color: #a7f306;
+color: #1a1a1a;
+}
 .technologiesWrapper {
     width: 100%;
     display: flex;

@@ -7,13 +7,13 @@ import AOS from "aos";
 function Main() {
   useEffect(() => {
     AOS.init({
-        duration: 1000, // Длительность анимации
-        offset: 30, // Отступ до срабатывания анимации
-        easing: 'ease-in-out', // Тип анимации
-        once: false, // Анимация срабатывает при каждом прокручивании
-        mirror: true, // Включить анимацию при обратной прокрутке
+      duration: 1000, // Длительность анимации
+      offset: 30, // Отступ до срабатывания анимации
+      easing: "ease-in-out", // Тип анимации
+      once: false, // Анимация срабатывает при каждом прокручивании
+      mirror: true, // Включить анимацию при обратной прокрутке
     });
-}, []);
+  }, []);
 
   const [startOpened, setStartOpened] = useState(true);
 
@@ -90,6 +90,30 @@ function Main() {
             </Marquee>
           </div>
           <div className="contentWrapper">
+            <div className="servicesWrapper">
+              <div className="serviceItem">
+                <img src="./images/service1.svg" alt="" />
+                <p>Layout</p> <button className="mainButton">Make Order</button>
+              </div>
+              <div className="serviceItem">
+                <img src="./images/service2.svg" alt="" />
+                <p>Server</p> <button className="mainButton">Make Order</button>
+              </div>
+              <div className="serviceItem">
+                <img src="./images/service3.svg" alt="" />
+                <p>Full Project</p>{" "}
+                <button className="mainButton">Make Order</button>
+              </div>
+              <div className="serviceItem">
+                <img src="./images/service4.svg" alt="" />
+                <p>TG Bot</p> <button className="mainButton">Make Order</button>
+              </div>
+              <div className="serviceItem">
+                <img src="./images/service5.svg" alt="" />
+                <p>Parcing Service</p>{" "}
+                <button className="mainButton">Make Order</button>
+              </div>
+            </div>
             <div className="technologiesWrapper">
               <h2 className="blockName" data-aos="fade-up">
                 ALL TECHNOLOGIES
