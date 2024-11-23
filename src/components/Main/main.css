@@ -14,12 +14,12 @@ body {
   box-sizing: border-box;
 }
 .image {
-    opacity: 0;
-    transition: opacity .4s ease-in-out; /* Плавный переход */
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out; /* Плавный переход */
 }
 
 .image.loaded {
-    opacity: 1; /* Изображение становится видимым */
+  opacity: 1; /* Изображение становится видимым */
 }
 .main {
   justify-content: center;
@@ -32,14 +32,16 @@ body {
   background-color: #1a1a1a;
 }
 .wrappers {
-    padding: 0 16px;
+  padding: 0 16px;
+  max-width: 700px;
+  position: relative;
 }
 .sphere {
   position: absolute;
   left: 0;
   transform: translateX(-50%);
   width: 80%;
-  filter: blur(10px);
+  filter: blur(8px);
   z-index: -1;
 }
 a {
@@ -50,21 +52,24 @@ a {
   text-decoration: none;
 }
 .marquee {
-    width: 100%;
+  width: 100%;
   padding: 20px 0;
   background: linear-gradient(90deg, #a7f306 0%, #f3cd06 100%);
 }
 .marquee-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden; /* Это нужно для предотвращения "выпадения" текста */
-    z-index: 1; /* Убедитесь, что Marquee находится на верхнем уровне */
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Это нужно для предотвращения "выпадения" текста */
+  z-index: 1; /* Убедитесь, что Marquee находится на верхнем уровне */
 }
 
 .marquee-container span {
-    white-space: nowrap; /* Запрещает перенос текста */
+  white-space: nowrap; /* Запрещает перенос текста */
 }
 .contentWrapper {
+  display: flex;
+  flex-direction: column;
+
   color: #f6f6f6;
 }
 .wrapper {
@@ -81,83 +86,107 @@ a {
   margin: 5px 0 0 0;
 }
 .contentWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-width: 100%;
-gap: 20px;
-padding: 30px 0;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  padding: 30px 0;
 }
 .introWrapper h1 {
-    text-align: left;
-    color: #f6f6f6;
-    margin-bottom: 20px;
+  text-align: left;
+  color: #f6f6f6;
+  margin-bottom: 20px;
 }
 .introWrapper p {
-    color: #f6f6f6;
-    margin-bottom: 30px;
+  color: #f6f6f6;
+  margin-bottom: 30px;
 }
 .introWrapper span {
-    color: #a7f306;
+  color: #a7f306;
 }
 .servicesWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-gap: 10px;
-width: 100%;
-
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
 }
 .serviceItem {
-    width: 48%;
-    padding: 16px;
-    border-radius: 14px;
-    background-color: #ffffff12;
-    border: 1px solid #ffffff2a;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 5px;
+  width: 48%;
+  padding: 16px;
+  border-radius: 14px;
+  background-color: #ffffff12;
+  border: 1px solid #ffffff2a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  backdrop-filter:blur(12px);
+  
+  
 }
 .serviceItem p {
-    margin-bottom: 12px;
-    font-weight: 700;
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 .mainButton {
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid #a7f306;
+  color: #a7f306;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+.mainButton:hover {
+  background-color: #a7f306;
+  color: #1a1a1a;
+}
+.primaryButton {
     padding: 15px 20px;
     width: 100%;
     border-radius: 14px;
     border: 1px solid #a7f306;
-    color: #a7f306;
-    background-color: transparent;
-    transition: all .2s ease;
+    color: #1a1a1a;
+    background-color: #a7f306;
+    transition: all 0.2s ease;
 }
-.mainButton:hover {
-background-color: #a7f306;
-color: #1a1a1a;
+.primaryButton:hover {
+    border: 1px solid #a7f306;
+    background-color: transparent;
+    color: #f6f6f6;
 }
 .technologiesWrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .blockName {
-    text-align: left;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 12px;
+}
+.blockName span {
+    color: #a7f306;
+}
+.blockNameYellow {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 12px;
+  padding: 12px 10px;
+  color: #1a1a1a;
+  background:linear-gradient(90deg, #a7f306 0%, #f3cd06 100%);
 }
 .techItem {
-    padding: 10px 5px;
-    border-radius: 10px;
+  padding: 10px 5px;
+  border-radius: 10px;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-
-  
-  
-  
 }
 .button {
   position: relative;
@@ -319,6 +348,182 @@ color: #1a1a1a;
     #ffffff 0%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+.modalWrapper {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+.modalBody {
+  overflow: hidden;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: #1a1a1a;
+  border-radius: 14px;
+  color: #f6f6f6;
+}
+.modalHeader {
+  padding: 15px 10px;
+  color: #1a1a1a;
+  width: 100%;
+  background: linear-gradient(90deg, #a7f306 0%, #f3cd06 100%);
+}
+.form {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.inputWrapper {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+.react-select-container {
+  width: 100%;
+}
+.formInput {
+  width: 100%; /* Сделайте ширину инпута адаптивной */
+  padding: 10px 20px; /* Внутренний отступ */
+ 
+  border-radius: 6px; /* Скругление границ */
+  border: none;
+  font-size: 16px; /* Размер шрифта */
+  font-family: "Arial", sans-serif; /* Шрифт */
+  outline: none; /* Убирает стандартное выделение */
+  transition: all 0.3s ease-in-out; /* Анимация при наведении */
+}
+
+.formInput::placeholder {
+  
+  opacity: 0.7; /* Немного прозрачный */
+}
+
+.formInput:focus {
+  background-color: rgba(167, 243, 6, 0.1); /* Лёгкий фон при фокусе */
+  -webkit-box-shadow: 10px 10px 33px -19px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 33px -19px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 33px -19px rgba(0,0,0,0.75);
+}
+.formTextarea {
+    width: 100%; /* Сделайте ширину инпута адаптивной */
+    padding: 10px 20px; /* Внутренний отступ */
+   
+    border-radius: 6px; /* Скругление границ */
+    border: none;
+    font-size: 16px; /* Размер шрифта */
+    font-family: "Arial", sans-serif; /* Шрифт */
+    outline: none; /* Убирает стандартное выделение */
+    transition: all 0.3s ease-in-out; /* Анимация при наведении */
+     min-height: 150px;
+}
+
+.formTextarea::placeholder {
+  
+    opacity: 0.7; /* Немного прозрачный */
+}
+
+.formTextarea:focus {
+    background-color: rgba(167, 243, 6, 0.1); /* Лёгкий фон при фокусе */
+    -webkit-box-shadow: 10px 10px 33px -19px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 33px -19px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 33px -19px rgba(0,0,0,0.75);
+}
+.modalActions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+.modalActions button {
+    width: fit-content;
+}
+.casesWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+.caseItem {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    background-color: #ffffff12;
+    border: 1px solid #ffffff2a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    text-align: left;
+}
+.caseItem ul {
+    padding-left: 20px;
+}
+.caseItem img {
+    width: 100%;
+}
+.caseItem h3 {
+    font-size: 18px;
+}
+.caseItem p {
+    font-size: 14px;
+    font-style: italic;
+
+}
+.projectsWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.projectItem {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    background-color: #ffffff12;
+    border: 1px solid #ffffff2a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    text-align: left;
+}
+.projectInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.projectInfo a {
+    width: fit-content;
+}
+.projectItem img {
+    width: 100%;
+}
+
+.sphere2 {
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
+    width: 80%;
+    bottom: 10%;
+    filter: blur(10px);
+    z-index: -1;
 }
 @media (max-device-width: 800px) {
 }
