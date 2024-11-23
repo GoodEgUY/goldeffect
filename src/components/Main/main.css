@@ -27,9 +27,12 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 0 16px;
+  padding: 0;
   overflow-x: hidden;
   background-color: #1a1a1a;
+}
+.wrappers {
+    padding: 0 16px;
 }
 .sphere {
   position: absolute;
@@ -47,8 +50,19 @@ a {
   text-decoration: none;
 }
 .marquee {
+    width: 100%;
   padding: 20px 0;
   background: linear-gradient(90deg, #a7f306 0%, #f3cd06 100%);
+}
+.marquee-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Это нужно для предотвращения "выпадения" текста */
+    z-index: 1; /* Убедитесь, что Marquee находится на верхнем уровне */
+}
+
+.marquee-container span {
+    white-space: nowrap; /* Запрещает перенос текста */
 }
 .contentWrapper {
   color: #f6f6f6;
@@ -61,7 +75,7 @@ a {
   z-index: 3;
   border-radius: 30px;
   width: 100vw;
-  padding: 40px 20px 0 20px;
+  padding: 40px 0 0 0;
 
   align-items: center;
   margin: 5px 0 0 0;
@@ -89,19 +103,21 @@ padding: 30px 0;
 }
 .servicesWrapper {
     display: flex;
-    flex-direction: column;
-gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+gap: 10px;
 width: 100%;
 
 }
 .serviceItem {
-    width: 100%;
+    width: 48%;
     padding: 16px;
     border-radius: 14px;
     background-color: #ffffff12;
     border: 1px solid #ffffff2a;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 5px;
 }
 .serviceItem p {

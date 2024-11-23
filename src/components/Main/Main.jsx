@@ -1,20 +1,13 @@
 import "./main.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Marquee from "react-fast-marquee";
-import "aos/dist/aos.css";
-import AOS from "aos";
+
+import { motion } from "framer-motion";
 
 function Main() {
   const [loaded, setLoaded] = useState(false);
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Длительность анимации
-      offset: 100, // Отступ перед активацией
-      once: true, // Анимация только один раз
-      mirror: false, // Не повторять при обратной прокрутке
-    });
-  }, []);
+
   return (
     <>
       <div className="main">
@@ -53,7 +46,7 @@ function Main() {
             </p>
           </div>
           */}
-          <div className="introWrapper">
+          <div className="introWrapper wrappers">
             <h1>
               TURN AN <span>IDEA</span> INTO A <span>PROJECT</span>
             </h1>
@@ -68,9 +61,15 @@ function Main() {
               <span style={{ marginRight: 100 }}>FX/CRYPTO EXPIRIENCE</span>
             </Marquee>
           </div>
-          <div className="contentWrapper">
-            <div className="servicesWrapper">
-              <div className="serviceItem">
+          <div className="contentWrapper ">
+            <div className="servicesWrapper wrappers">
+              <h2 className="blockName">///SERVICES</h2>
+              <motion.div
+                className="serviceItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img
                   src="./images/service1.svg"
                   alt=""
@@ -78,8 +77,13 @@ function Main() {
                   onLoad={() => setLoaded(true)}
                 />
                 <p>Layout</p> <button className="mainButton">Make Order</button>
-              </div>
-              <div className="serviceItem">
+              </motion.div>
+              <motion.div
+                className="serviceItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img
                   src="./images/service2.svg"
                   alt=""
@@ -87,8 +91,13 @@ function Main() {
                   onLoad={() => setLoaded(true)}
                 />
                 <p>Server</p> <button className="mainButton">Make Order</button>
-              </div>
-              <div className="serviceItem">
+              </motion.div>
+              <motion.div
+                className="serviceItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img
                   src="./images/service3.svg"
                   alt=""
@@ -97,8 +106,13 @@ function Main() {
                 />
                 <p>Full Project</p>{" "}
                 <button className="mainButton">Make Order</button>
-              </div>
-              <div className="serviceItem">
+              </motion.div>
+              <motion.div
+                className="serviceItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img
                   src="./images/service4.svg"
                   alt=""
@@ -106,8 +120,13 @@ function Main() {
                   onLoad={() => setLoaded(true)}
                 />
                 <p>TG Bot</p> <button className="mainButton">Make Order</button>
-              </div>
-              <div className="serviceItem">
+              </motion.div>
+              <motion.div
+                className="serviceItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img
                   src="./images/service5.svg"
                   alt=""
@@ -116,36 +135,89 @@ function Main() {
                 />
                 <p>Parcing Service</p>{" "}
                 <button className="mainButton">Make Order</button>
-              </div>
+              </motion.div>
+              <motion.div
+                className="serviceItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src="./images/service6.svg"
+                  alt=""
+                  className={`image ${loaded ? "loaded" : ""}`}
+                  onLoad={() => setLoaded(true)}
+                />
+                <p>Other..</p>
+                <button className="mainButton">Make Order</button>
+              </motion.div>
             </div>
-            <div className="technologiesWrapper">
-              <h2 className="blockName" data-aos="fade-up">
-                ALL TECHNOLOGIES
-              </h2>
-              <div className="techItem" data-aos="fade-up">
+            <div className="technologiesWrapper wrappers">
+              <h2 className="blockName">///TECHNOLOGIES</h2>
+              <motion.div
+                className="techItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 HTML5/CSS3/JS(ES.6)
-              </div>
-              <div className="techItem" data-aos="fade-up">
+              </motion.div>
+              <motion.div
+                className="techItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 React.JS
-              </div>
-              <div className="techItem" data-aos="fade-up">
+              </motion.div>
+              <motion.div
+                className="techItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 Gatsby.JS
-              </div>
-              <div className="techItem" data-aos="fade-up">
+              </motion.div>
+              <motion.div
+                className="techItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 Next.JS
-              </div>
-              <div className="techItem" data-aos="fade-up">
+              </motion.div>
+              <motion.div
+                className="techItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 Node.JS
-              </div>
-              <div className="techItem" data-aos="fade-up">
+              </motion.div>
+              <motion.div
+                className="techItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 Django
-              </div>
-              <div className="techItem" data-aos="fade-up">
+              </motion.div>
+              <motion.div
+                className="techItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 Python
-              </div>
-              <div className="techItem" data-aos="fade-up">
+              </motion.div>
+              <motion.div
+                className="techItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 PHP
-              </div>
+              </motion.div>
             </div>
           </div>
           {/*{startOpened ? (
