@@ -1,11 +1,12 @@
 import "./main.css";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Marquee from "react-fast-marquee";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
 function Main() {
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     AOS.init();
   }, [])
@@ -66,24 +67,29 @@ function Main() {
           <div className="contentWrapper">
             <div className="servicesWrapper">
               <div className="serviceItem">
-                <img src="./images/service1.svg" alt="" />
+                <img src="./images/service1.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
+                onLoad={() => setLoaded(true)}/>
                 <p>Layout</p> <button className="mainButton">Make Order</button>
               </div>
               <div className="serviceItem">
-                <img src="./images/service2.svg" alt="" />
+                <img src="./images/service2.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
+                onLoad={() => setLoaded(true)} />
                 <p>Server</p> <button className="mainButton">Make Order</button>
               </div>
               <div className="serviceItem">
-                <img src="./images/service3.svg" alt="" />
+                <img src="./images/service3.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
+                onLoad={() => setLoaded(true)}/>
                 <p>Full Project</p>{" "}
                 <button className="mainButton">Make Order</button>
               </div>
               <div className="serviceItem">
-                <img src="./images/service4.svg" alt="" />
+                <img src="./images/service4.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
+                onLoad={() => setLoaded(true)}/>
                 <p>TG Bot</p> <button className="mainButton">Make Order</button>
               </div>
               <div className="serviceItem">
-                <img src="./images/service5.svg" alt="" />
+                <img src="./images/service5.svg" alt="" className={`image ${loaded ? "loaded" : ""}`}
+                onLoad={() => setLoaded(true)}/>
                 <p>Parcing Service</p>{" "}
                 <button className="mainButton">Make Order</button>
               </div>
