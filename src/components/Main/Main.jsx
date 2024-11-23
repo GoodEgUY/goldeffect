@@ -1,6 +1,6 @@
 import "./main.css";
-import { useState, useEffect } from "react";
-import Projects from "./Projects/Projects";
+import { useEffect } from "react";
+
 import Marquee from "react-fast-marquee";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -15,25 +15,7 @@ function Main() {
     });
   }, []);
 
-  const [startOpened, setStartOpened] = useState(true);
-
-  const [UxProject, setUxProject] = useState(false);
-  const [UiProject, setUiProject] = useState(false);
-  const openStart = () => {
-    setStartOpened(true);
-    setUxProject(false);
-    setUiProject(false);
-  };
-  const openUxProject = () => {
-    setStartOpened(false);
-    setUxProject(true);
-    setUiProject(false);
-  };
-  const openUiProject = () => {
-    setStartOpened(false);
-    setUxProject(false);
-    setUiProject(true);
-  };
+ 
 
   // ff
   return (
