@@ -4,22 +4,14 @@ import { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import "aos/dist/aos.css";
 import AOS from "aos";
+
 function Main() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // Длительность анимации
-      offset: 30, // Отступ до срабатывания анимации
-      easing: "ease-in-out", // Тип анимации
-      once: false, // Анимация срабатывает при каждом прокручивании
-      mirror: true, // Включить анимацию при обратной прокрутке
-    });
-  }, []);
-
- 
-
-  // ff
+    AOS.init();
+  }, [])
   return (
     <>
+      
       <div className="main">
         <div className="wrapper">
           <img src="./images/sphere2.svg" alt="" className="sphere" />
