@@ -494,6 +494,23 @@ function Main() {
                   </a>
                 </div>
               </motion.div>
+              <motion.div
+                className="projectItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img src="./images/interDent.png" alt="" />
+                <div className="projectInfo">
+                  <h3>InterDent</h3>
+                  <a
+                    href="https://medquiz.click/interdentimplant/"
+                    className="mainButton"
+                  >
+                    Visit
+                  </a>
+                </div>
+              </motion.div>
             </div>
           </div>
           {/*{startOpened ? (
