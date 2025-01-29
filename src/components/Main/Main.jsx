@@ -440,6 +440,20 @@ function Main() {
               >
                 <img src="./images/pods.png" alt="" />
                 <div className="projectInfo">
+                  <h3>Lunares</h3>
+                  <a href="https://lunares.com.ua" className="mainButton">
+                    Visit
+                  </a>
+                </div>
+              </motion.div>
+              <motion.div
+                className="projectItem"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img src="./images/pods.png" alt="" />
+                <div className="projectInfo">
                   <h3>PODS</h3>
                   <a href="https://pods.com.ua" className="mainButton">
                     Visit
