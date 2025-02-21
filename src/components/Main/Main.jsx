@@ -438,7 +438,7 @@ function Main() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <img src="./images/pods.png" alt="" />
+                <img src="./images/lunares.png" alt="" />
                 <div className="projectInfo">
                   <h3>Lunares</h3>
                   <a href="https://lunares.com.ua" className="mainButton">
